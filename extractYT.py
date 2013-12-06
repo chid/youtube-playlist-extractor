@@ -1,5 +1,8 @@
-f = open("test.html")
-HTML = f.read()
+#f = open("test.html")
+#HTML = f.read()
+import urllib2
+response = urllib2.urlopen('http://www.youtube.com/playlist?list=PL772556F1EFC4D01C')
+HTML = response.read()
 import re
 
 # http://www.youtube.com/watch?v=3_RhISgoXUs&list=PLED25F943F8D6081C&index=11&feature=plpp_video
